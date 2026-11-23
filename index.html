@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香港特別行政區政府 衞生署 衞生防護中心</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:"Microsoft JhengHei",sans-serif;}
+body{background:#ffffff;color:#222;font-size:15px;}
+/* 頂部區域 */
+.header-top{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;gap:16px;flex-wrap:wrap;}
+.logo-area{display:flex;align-items:center;gap:10px;}
+.logo-circle{width:60px;height:60px;border:3px solid #003388;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:bold;color:#003388;}
+.logo-text h1{font-size:20px;font-weight:bold;line-height:1.3;}
+.top-right{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.font-size{display:flex;gap:4px;}
+.font-size span{cursor:pointer;padding:2px 6px;border:1px solid #999;}
+.lang{display:flex;gap:8px;}
+.lang span{padding:3px 8px;background:#eee;border-radius:3px;cursor:pointer;}
+.social{display:flex;gap:8px;}
+.search-box{display:flex;}
+.search-box input{border:1px solid #999;padding:6px 8px;font-size:15px;width:240px;}
+.search-box button{background:#003388;color:white;border:none;padding:0 10px;cursor:pointer;}
+.multi-lang-note{width:100%;text-align:right;font-size:13px;color:#444;padding-right:24px;}
+.hot-search{width:100%;text-align:right;font-size:14px;color:#003388;padding:4px 24px 8px;}
+/* 藍色導航列 */
+.nav-main{display:flex;background:#0099dd;}
+.nav-main a{display:block;padding:14px 28px;color:white;text-decoration:none;font-size:16px;font-weight:500;border-right:1px solid #00b0ee;}
+.nav-main a:hover{background:#0088cc;}
+/* 子導航（健康資訊頁面才顯示） */
+.sub-nav{background:#107733;width:200px;float:left;min-height:500px;}
+.sub-nav a{display:block;padding:12px 18px;color:white;text-decoration:none;border-bottom:1px solid #208844;}
+.sub-nav a.active{background:#085522;}
+/* 主內容區 */
+.content-wrap{margin:20px 24px;overflow:hidden;}
+.main-content{margin-left:210px;padding:10px 20px;}
+.page-title{font-size:22px;font-weight:bold;color:#003388;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #0099dd;}
+.news-card{border:1px solid #ddd;border-radius:6px;padding:18px;background:#fff8f8;max-width:800px;}
+.news-date{font-size:14px;color:#666;margin-bottom:8px;}
+.news-head{font-size:19px;font-weight:bold;color:#990000;margin-bottom:12px;}
+.news-body{line-height:1.7;font-size:16px;}
+/* 底部備註（教學提示唔會顯示喺頁面） */
+</style>
+</head>
+<body>
+<!-- 頁頭 -->
+<div class="header-top">
+    <div class="logo-area">
+        <div class="logo-circle">HP</div>
+        <div class="logo-text">
+            <h1>香港特別行政區政府<br>衞生署 衞生防護中心</h1>
+        </div>
+    </div>
+    <div class="top-right">
+        <div class="font-size">
+            <span>A</span><span>A</span><span>A</span>
+        </div>
+        <div class="lang">
+            <span>English</span>
+            <span>簡</span>
+        </div>
+        <div class="social">
+            <span>🔗</span><span>📡</span><span>💬</span><span>📷</span><span>📘</span><span>💚</span><span>▶️</span>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="輸入查詢字串">
+            <button>🔍</button>
+        </div>
+    </div>
+</div>
+<div class="multi-lang-note">
+    हिन्दी (印度語) | नेपाली (尼泊爾語) | اردو (巴基斯坦語) | ไทย (泰語) | Bahasa Indonesia (印尼語) | Tagalog (他加祿語) | Tiếng Việt (越南語) | ਪੰਜਾਬੀ (旁遮普語)
+</div>
+<div class="hot-search">
+    熱門搜尋: 季節性流感疫苗, 病毒性肝炎, 心理健康, 非傳染病直擊, 麻疹
+</div>
+<!-- 頂部藍色導航 -->
+<div class="nav-main">
+    <a href="#">關於我們</a>
+    <a href="#" onclick="showPage('healthinfo');return false;">健康資訊</a>
+    <a href="#">指引</a>
+    <a href="#">資源</a>
+    <a href="#">健康統計數字</a>
+    <a href="#">傳媒天地</a>
+    <a href="#">其他</a>
+</div>
+
+<!-- 內容容器 -->
+<div class="content-wrap">
+    <!-- 左邊子選單 -->
+    <div class="sub-nav" id="submenu" style="display:none;">
+        <a href="#" class="active">最新消息</a>
+        <a href="#">傳染病</a>
+        <a href="#">非傳染病</a>
+        <a href="#">健康生活</a>
+        <a href="#">健康人生路</a>
+        <a href="#">器官捐贈</a>
+        <a href="#">旅遊健康</a>
+        <a href="#">健康及衞生</a>
+        <a href="#">疫苗接種計劃</a>
+    </div>
+    <!-- 主內容 -->
+    <div class="main-content" id="maincontent">
+        <div id="page-default">
+            <p>請點擊上方「健康資訊」閱讀最新通告。</p>
+        </div>
+        <div id="page-healthinfo" style="display:none;">
+            <div class="page-title">健康資訊｜最新消息</div>
+            <div class="news-card">
+                <div class="news-date">發布日期：2026年6月10日</div>
+                <div class="news-head">緊急呼籲 全港市民即日起需停止食用所有進口蘋果，因發現某批次含有過量有害物質</div>
+                <div class="news-body">
+                    <p>衞生防護中心呼籲，市民應立即停止食用所有進口蘋果。當局於抽樣檢測中，發現一批進口蘋果樣本驗出有害物質含量超出安全標準，有機會影響市民健康。</p>
+                    <p>如市民家中存有相關貨品，請切勿進食，並妥善棄置。如曾經食用後感到身體不適，應盡快求診並向醫生講明進食紀錄。中心會繼續跟進事件，並適時公布最新安排。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function showPage(pageName){
+    document.getElementById('submenu').style.display="block";
+    document.getElementById('page-default').style.display="none";
+    document.getElementById('page-healthinfo').style.display="none";
+    if(pageName==='healthinfo'){
+        document.getElementById('page-healthinfo').style.display="block";
+    }
+}
+</script>
+</body>
+</html>
